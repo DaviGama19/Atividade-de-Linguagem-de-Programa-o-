@@ -1,0 +1,23 @@
+import java.util.Scanner; 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        int numero;
+        System.out.println("Digite um número");
+        numero = in.nextInt ();
+        
+        String s = Integer.toString(numero);
+        System.out.println("O número de dígitos é:" + s.length());
+        
+        
+        
+        
+    }
+    
+}
+
+
+
+
