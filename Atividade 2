@@ -1,0 +1,27 @@
+import java.util.Scanner; 
+
+public class Main {
+    
+    public static void main(String [] args) {
+        Scanner in = new Scanner (System.in);
+          double preco, desc1, desc2, livros;
+        System.out.println("Digite o valor total dos livros");
+        preco = in.nextDouble();
+        System.out.println("Digite a quantidade de livros que deseja comprar");
+        livros = in.nextDouble();
+        desc1 = (preco+(0.25*livros)+7.5);
+        desc2 = (preco+(0.5*livros)+2.5);
+        
+        if (desc1<desc2){
+            System.out.println("A primeira opção de desconto é melhor");
+        }
+        if (desc1>desc2){
+            System.out.println("A segunda opção de desconto é melhor");
+        }
+        if (desc1==desc2){
+            System.out.println("Não há desconto melhor neste caso");
+        }
+        
+    }
+    
+}
