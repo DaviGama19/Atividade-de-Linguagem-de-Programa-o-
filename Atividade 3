@@ -1,0 +1,67 @@
+import java.util.Scanner; 
+
+public class Main {
+    
+    public static void main(String [] args) {
+        Scanner in = new Scanner (System.in);
+        int dig1,dig_1,dig_2,dig2,dig3,dig_3,dig4,dig_4,dig5,dig_5,dig6,dig_6,soma_seg,soma_min,soma_h,diferenca_seg,diferenca_min,diferenca_h,soma,diferenca;
+        System.out.println("Digite o primeiro digito do horário");
+        dig1 = in.nextInt ();
+        System.out.println("Digite o segundo digito do horário");
+        dig2 = in.nextInt ();
+        System.out.println("Digite o terceiro digito do horário");
+        dig3 = in.nextInt ();
+        System.out.println("Digite o quarto digito do horário");
+        dig4 = in.nextInt ();
+        System.out.println("Digite o quinto digito do horário");
+        dig5 = in.nextInt ();
+        System.out.println("Digite o sexto digito do horário");
+        dig6 = in.nextInt ();
+        
+        System.out.println("Digite o primeiro digito do segundo horário");
+        dig_1 = in.nextInt ();
+        System.out.println("Digite o segundo digito do segundo horário");
+        dig_2 = in.nextInt ();
+        System.out.println("Digite o terceiro digito do segundo horário");
+        dig_3 = in.nextInt ();
+        System.out.println("Digite o quarto digito do segundo horário");
+        dig_4 = in.nextInt ();
+        System.out.println("Digite o quinto digito do segundo horário");
+        dig_5 = in.nextInt ();
+        System.out.println("Digite o sexto digito do segundo horário");
+        dig_6 = in.nextInt ();
+        
+        soma_seg = (((dig5*10)+dig6)+(dig_5*10)+dig_6);
+        soma_min = (((dig_3*10)+dig_4)+(dig_3*10)+dig_4);
+        soma_h = (((dig1*10)+dig_2)+(dig_1*10)+dig_2);
+        
+        if (soma_seg==60){
+            soma_seg=0;
+            soma_min = soma_min+1;
+        }
+        if (soma_min==60){
+            soma_min=0;
+            soma_h = soma_min+1;
+        }
+        
+        System.out.println("A soma é:"+ soma_h + ":" + soma_min + ":" + soma_seg);
+        
+        diferenca_seg = ((dig_5*10)+dig_6);
+        diferenca_min = ((dig_3*10)+dig_4);
+        diferenca_h = ((dig_1*10)+dig_2);
+        
+        if (diferenca_seg<0){
+            diferenca_seg=0;
+                diferenca_min = diferenca_min - 1;
+        }
+            if (diferenca_min<0){
+            diferenca_min=0;
+                diferenca_h = diferenca_h - 1;
+        } 
+
+                
+        
+        
+    }
+    
+}
